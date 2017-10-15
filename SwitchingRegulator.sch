@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.3.2">
+<eagle version="7.4.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
-<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -1686,16 +1685,17 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pad name="P$2" x="22" y="-6.7" drill="6.6" diameter="10.16"/>
 <text x="12" y="20" size="1.27" layer="21">&gt;Name</text>
 <text x="12" y="1" size="1.27" layer="21">&gt;Value</text>
+<text x="8.89" y="17.78" size="1.27" layer="21">PQ3218-3R3-70-T</text>
 </package>
 <package name="CAP_POL_220UF">
 <circle x="0" y="0" radius="6.35" width="0.1524" layer="21"/>
 <text x="-2.54" y="2.54" size="1.27" layer="21">+</text>
-<circle x="0" y="2.4892" radius="0.283978125" width="0.127" layer="20"/>
-<circle x="0" y="-2.54" radius="0.2794" width="0.127" layer="20"/>
-<pad name="-" x="0" y="-2.54" drill="1" diameter="1.4224" shape="square"/>
+<circle x="0" y="2.4892" radius="0.283978125" width="0.127" layer="21"/>
+<circle x="0" y="-2.54" radius="0.2794" width="0.127" layer="21"/>
+<pad name="GND" x="0" y="-2.54" drill="1" diameter="1.4224" shape="square" thermals="no"/>
 <text x="-3.1242" y="3.9878" size="1.27" layer="25">&gt;Name</text>
 <text x="-3.3528" y="-8.1026" size="1.27" layer="27">&gt;Value</text>
-<pad name="+" x="0" y="2.4892" drill="1" diameter="1.6256"/>
+<pad name="+" x="0" y="2.4892" drill="1" diameter="1.6256" thermals="no"/>
 </package>
 <package name="DIODE_SCHOTTKY_30V_1A">
 <wire x1="0" y1="0" x2="1.7018" y2="0" width="0.127" layer="21"/>
@@ -1850,7 +1850,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <device name="" package="CAP_POL_220UF">
 <connects>
 <connect gate="G$1" pin="+" pad="+"/>
-<connect gate="G$1" pin="-" pad="-"/>
+<connect gate="G$1" pin="-" pad="GND"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1866,7 +1866,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <device name="" package="CAP_POL_220UF">
 <connects>
 <connect gate="G$1" pin="+" pad="+"/>
-<connect gate="G$1" pin="-" pad="-"/>
+<connect gate="G$1" pin="-" pad="GND"/>
 </connects>
 <technologies>
 <technology name=""/>
