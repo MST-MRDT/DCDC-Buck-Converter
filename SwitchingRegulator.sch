@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.4.0">
+<eagle version="8.4.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -1957,6 +1958,14 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <classes>
 <class number="0" name="default" width="0" drill="0">
 </class>
+<class number="1" name="high_current" width="9.525" drill="0">
+</class>
+<class number="2" name="fet_drive" width="0.508" drill="0">
+<clearance class="2" value="0.0762"/>
+</class>
+<class number="3" name="sample" width="0.127" drill="0">
+<clearance class="3" value="0.0762"/>
+</class>
 </classes>
 <parts>
 <part name="CB" library="SparkFun-Passives" deviceset="CAP" device="0603-CAP" value="0.1u"/>
@@ -1981,7 +1990,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND5" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="J1" library="MRDT-Connectors" deviceset="APP_2POS_CONFIG" device="5V_HORIZ"/>
 <part name="J2" library="MRDT-Connectors" deviceset="APP_2POS_CONFIG" device="5V_HORIZ"/>
-<part name="J3" library="MRDT-Connectors" deviceset="APP_2POS_CONFIG" device="5V_HORIZ"/>
 <part name="Q2" library="MRDT-2014-All" deviceset="Q_CSD18532KCS" device="PCB"/>
 <part name="C1" library="buckconverter" deviceset="UCZ1K220MCL1GS" device="" value="22u"/>
 <part name="GND2" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
@@ -1994,6 +2002,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="DB" library="buckconverter" deviceset="RF05VAM1STR" device=""/>
 <part name="U1" library="MRDT-ICs" deviceset="OKI-78SR-*/1.5-W36?C" device="H" technology="5"/>
 <part name="CDRVCC" library="SparkFun-Passives" deviceset="CAP" device="0603-CAP" value="10u"/>
+<part name="J4" library="MRDT-Connectors" deviceset="APP_2POS_CONFIG" device="12V_HORIZ"/>
 </parts>
 <sheets>
 <sheet>
@@ -2024,8 +2033,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="J1" gate="VCC" x="220.98" y="142.24"/>
 <instance part="J2" gate="GND" x="256.54" y="137.16"/>
 <instance part="J2" gate="VCC" x="256.54" y="132.08"/>
-<instance part="J3" gate="GND" x="152.4" y="195.58" rot="R90"/>
-<instance part="J3" gate="VCC" x="139.7" y="195.58" rot="R90"/>
 <instance part="Q2" gate="G$1" x="154.94" y="132.08"/>
 <instance part="C1" gate="G$1" x="93.98" y="149.86"/>
 <instance part="GND2" gate="1" x="93.98" y="144.78"/>
@@ -2038,6 +2045,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="DB" gate="G$1" x="124.46" y="147.32" rot="R270"/>
 <instance part="U1" gate="G$1" x="109.22" y="187.96"/>
 <instance part="CDRVCC" gate="G$1" x="127" y="91.44" rot="R90"/>
+<instance part="J4" gate="GND" x="152.4" y="195.58" rot="R90"/>
+<instance part="J4" gate="VCC" x="139.7" y="195.58" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -2187,8 +2196,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </segment>
 <segment>
 <pinref part="GND4" gate="1" pin="GND"/>
-<pinref part="J3" gate="GND" pin="P$1"/>
 <wire x1="152.4" y1="172.72" x2="152.4" y2="187.96" width="0.1524" layer="91"/>
+<pinref part="J4" gate="GND" pin="P$1"/>
 </segment>
 <segment>
 <pinref part="C1" gate="G$1" pin="-"/>
@@ -2242,7 +2251,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <junction x="93.98" y="157.48"/>
 </segment>
 </net>
-<net name="N$16" class="0">
+<net name="N$16" class="2">
 <segment>
 <pinref part="U$1" gate="G$1" pin="BG"/>
 <wire x1="104.14" y1="104.14" x2="142.24" y2="104.14" width="0.1524" layer="91"/>
@@ -2287,7 +2296,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <junction x="124.46" y="129.54"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="N$2" class="2">
 <segment>
 <pinref part="U$1" gate="G$1" pin="TG"/>
 <wire x1="104.14" y1="124.46" x2="114.3" y2="124.46" width="0.1524" layer="91"/>
@@ -2314,7 +2323,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="139.7" y1="170.18" x2="139.7" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="187.96" x2="96.52" y2="170.18" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="170.18" x2="139.7" y2="170.18" width="0.1524" layer="91"/>
-<pinref part="J3" gate="VCC" pin="P$1"/>
 <wire x1="139.7" y1="187.96" x2="139.7" y2="170.18" width="0.1524" layer="91"/>
 <pinref part="CIN2" gate="G$1" pin="1"/>
 <wire x1="187.96" y1="165.1" x2="187.96" y2="162.56" width="0.1524" layer="91"/>
@@ -2335,6 +2343,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <junction x="152.4" y="142.24"/>
 <junction x="170.18" y="165.1"/>
 <junction x="139.7" y="170.18"/>
+<pinref part="J4" gate="VCC" pin="P$1"/>
 </segment>
 </net>
 <net name="VOUT12+" class="0">
