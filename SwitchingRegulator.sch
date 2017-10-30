@@ -1056,7 +1056,7 @@ Murata</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="SparkFun-Aesthetics">
+<library name="SparkFun-Aesthetics" urn="urn:adsk.eagle:library:507">
 <description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
 In this library you'll find non-functional items- supply symbols, logos, notations, frame blocks, etc.&lt;br&gt;&lt;br&gt;
 We've spent an enormous amount of time creating and checking these footprints and parts, but it is the end user's responsibility to ensure correctness and suitablity for a given componet or application. If you enjoy using this library, please buy one of our products at www.sparkfun.com.
@@ -1635,8 +1635,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="1.7018" y="2.1844"/>
 <vertex x="1.7018" y="3.429"/>
 </polygon>
-<smd name="P$1" x="0.889" y="3.0734" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$2" x="0.889" y="-0.4064" dx="1.27" dy="0.635" layer="1"/>
+<smd name="P$1" x="0.889" y="3.0734" dx="1.016" dy="0.508" layer="1"/>
+<smd name="P$2" x="0.889" y="-0.4064" dx="1.016" dy="0.508" layer="1"/>
 <text x="-0.254" y="3.81" size="1.27" layer="25">&gt;Name</text>
 <text x="-0.762" y="-2.286" size="1.27" layer="27">&gt;Value</text>
 </package>
@@ -1686,6 +1686,22 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="-5.08" y="3.81" size="1.27" layer="25">&gt;NAME</text>
 <text x="-5.08" y="-5.08" size="1.27" layer="27">&gt;VALUE</text>
 <rectangle x1="-5.334" y1="1.524" x2="5.334" y2="2.54" layer="21"/>
+</package>
+<package name="RADIAL_FIN_HEATSINK">
+<wire x1="8.636" y1="12.7" x2="21.082" y2="12.7" width="0.127" layer="21"/>
+<wire x1="21.082" y1="12.7" x2="21.082" y2="-12.7" width="0.127" layer="21"/>
+<wire x1="21.082" y1="-12.7" x2="8.636" y2="-12.7" width="0.127" layer="21"/>
+<wire x1="8.636" y1="-12.7" x2="8.636" y2="-0.762" width="0.127" layer="21"/>
+<wire x1="8.636" y1="-0.762" x2="-8.636" y2="-0.762" width="0.127" layer="21"/>
+<wire x1="-8.636" y1="-0.762" x2="-8.636" y2="-12.7" width="0.127" layer="21"/>
+<wire x1="-8.636" y1="-12.7" x2="-21.082" y2="-12.7" width="0.127" layer="21"/>
+<wire x1="-21.082" y1="-12.7" x2="-21.082" y2="12.7" width="0.127" layer="21"/>
+<wire x1="-21.082" y1="12.7" x2="-8.636" y2="12.7" width="0.127" layer="21"/>
+<wire x1="-8.636" y1="12.7" x2="-8.636" y2="0.762" width="0.127" layer="21"/>
+<wire x1="-8.636" y1="0.762" x2="8.636" y2="0.762" width="0.127" layer="21"/>
+<wire x1="8.636" y1="0.762" x2="8.636" y2="12.7" width="0.127" layer="21"/>
+<pad name="P$1" x="12.7" y="0" drill="2.794" shape="square"/>
+<pad name="P$2" x="-12.7" y="0" drill="2.794" shape="square"/>
 </package>
 </packages>
 <symbols>
@@ -1774,6 +1790,25 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="5.08" y1="2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
 <text x="5.08" y="5.08" size="1.778" layer="95">&gt;NAME</text>
 <text x="5.08" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="HEATSINK-SMD-2">
+<wire x1="-7.62" y1="5.08" x2="-7.62" y2="0" width="0.4064" layer="94"/>
+<wire x1="-7.62" y1="0" x2="-5.08" y2="0" width="0.4064" layer="94"/>
+<wire x1="-5.08" y1="0" x2="-2.54" y2="0" width="0.4064" layer="94"/>
+<wire x1="-2.54" y1="0" x2="0" y2="0" width="0.4064" layer="94"/>
+<wire x1="0" y1="0" x2="2.54" y2="0" width="0.4064" layer="94"/>
+<wire x1="2.54" y1="0" x2="5.08" y2="0" width="0.4064" layer="94"/>
+<wire x1="5.08" y1="0" x2="7.62" y2="0" width="0.4064" layer="94"/>
+<wire x1="7.62" y1="0" x2="7.62" y2="5.08" width="0.4064" layer="94"/>
+<wire x1="-5.08" y1="5.08" x2="-5.08" y2="0" width="0.4064" layer="94"/>
+<wire x1="-2.54" y1="5.08" x2="-2.54" y2="0" width="0.4064" layer="94"/>
+<wire x1="0" y1="5.08" x2="0" y2="0" width="0.4064" layer="94"/>
+<wire x1="2.54" y1="5.08" x2="2.54" y2="0" width="0.4064" layer="94"/>
+<wire x1="5.08" y1="5.08" x2="5.08" y2="0" width="0.4064" layer="94"/>
+<pin name="P$1" x="-5.08" y="-2.54" visible="off" length="short" rot="R90"/>
+<pin name="P$2" x="5.08" y="-2.54" visible="off" length="short" rot="R90"/>
+<text x="-7.62" y="8.255" size="1.778" layer="95">&gt;NAME</text>
+<text x="-7.62" y="5.715" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -1890,9 +1925,25 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </device>
 </devices>
 </deviceset>
+<deviceset name="530002B02500G">
+<gates>
+<gate name="G$1" symbol="HEATSINK-SMD-2" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="RADIAL_FIN_HEATSINK">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
-<library name="SparkFun-PowerSymbols">
+<library name="SparkFun-PowerSymbols" urn="urn:adsk.eagle:library:530">
 <description>&lt;h3&gt;SparkFun Power Symbols&lt;/h3&gt;
 This library contains power, ground, and voltage-supply symbols.
 &lt;br&gt;
@@ -1909,7 +1960,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <packages>
 </packages>
 <symbols>
-<symbol name="DGND">
+<symbol name="DGND" urn="urn:adsk.eagle:symbol:39415/1" library_version="1">
 <description>&lt;h3&gt;Digital Ground Supply&lt;/h3&gt;</description>
 <wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
 <pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
@@ -1917,7 +1968,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="GND" prefix="GND">
+<deviceset name="GND" urn="urn:adsk.eagle:component:39439/1" prefix="GND" library_version="1">
 <description>&lt;h3&gt;Ground Supply Symbol&lt;/h3&gt;
 &lt;p&gt;Generic signal ground supply symbol.&lt;/p&gt;</description>
 <gates>
@@ -7459,14 +7510,14 @@ Most frame-mounted PCB's - M8</description>
 <part name="U$1" library="MRDT-ICs" deviceset="LTC3703-5" device=""/>
 <part name="RC2" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="10k"/>
 <part name="RF" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="10"/>
-<part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="GND3" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="GND4" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="GND5" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="GND1" library="SparkFun-Aesthetics" library_urn="urn:adsk.eagle:library:507" deviceset="GND" device=""/>
+<part name="GND3" library="SparkFun-Aesthetics" library_urn="urn:adsk.eagle:library:507" deviceset="GND" device=""/>
+<part name="GND4" library="SparkFun-Aesthetics" library_urn="urn:adsk.eagle:library:507" deviceset="GND" device=""/>
+<part name="GND5" library="SparkFun-Aesthetics" library_urn="urn:adsk.eagle:library:507" deviceset="GND" device=""/>
 <part name="J1" library="MRDT-Connectors" deviceset="APP_2POS_CONFIG" device="5V_HORIZ"/>
 <part name="J2" library="MRDT-Connectors" deviceset="APP_2POS_CONFIG" device="5V_HORIZ"/>
 <part name="C1" library="buckconverter" deviceset="UCZ1K220MCL1GS" device="" value="22u"/>
-<part name="GND2" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="GND2" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="L1" library="buckconverter" deviceset="PQ3218-3R3-70-T" device="" value="3.3uH"/>
 <part name="COUT1" library="buckconverter" deviceset="EGPD101ELL221MK25H" device="" value="220u"/>
 <part name="COUT2" library="buckconverter" deviceset="EGPD101ELL221MK25H" device="" value="220u"/>
@@ -7476,11 +7527,11 @@ Most frame-mounted PCB's - M8</description>
 <part name="U1" library="MRDT-ICs" deviceset="OKI-78SR-*/1.5-W36?C" device="H" technology="5"/>
 <part name="CDRVCC" library="SparkFun-Passives" deviceset="CAP" device="0603-CAP" value="10u"/>
 <part name="J4" library="MRDT-Connectors" deviceset="APP_2POS_CONFIG" device="12V_HORIZ"/>
-<part name="GND6" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="GND7" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="GND8" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="GND9" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="GND10" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="GND6" library="SparkFun-Aesthetics" library_urn="urn:adsk.eagle:library:507" deviceset="GND" device=""/>
+<part name="GND7" library="SparkFun-Aesthetics" library_urn="urn:adsk.eagle:library:507" deviceset="GND" device=""/>
+<part name="GND8" library="SparkFun-Aesthetics" library_urn="urn:adsk.eagle:library:507" deviceset="GND" device=""/>
+<part name="GND9" library="SparkFun-Aesthetics" library_urn="urn:adsk.eagle:library:507" deviceset="GND" device=""/>
+<part name="GND10" library="SparkFun-Aesthetics" library_urn="urn:adsk.eagle:library:507" deviceset="GND" device=""/>
 <part name="H1" library="MRDT-Hardware" deviceset="MOUNTING_HOLE" device="#8"/>
 <part name="H2" library="MRDT-Hardware" deviceset="MOUNTING_HOLE" device="#8"/>
 <part name="H3" library="MRDT-Hardware" deviceset="MOUNTING_HOLE" device="#8"/>
@@ -7488,6 +7539,8 @@ Most frame-mounted PCB's - M8</description>
 <part name="LOGO1" library="MRDT-Hardware" deviceset="MRDT_LOGO" device=""/>
 <part name="U$2" library="buckconverter" deviceset="IPP052N06L3GXKSA1" device=""/>
 <part name="U$3" library="buckconverter" deviceset="IPP052N06L3GXKSA1" device=""/>
+<part name="U$4" library="buckconverter" deviceset="530002B02500G" device=""/>
+<part name="U$5" library="buckconverter" deviceset="530002B02500G" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7546,6 +7599,8 @@ Most frame-mounted PCB's - M8</description>
 <instance part="LOGO1" gate="G$1" x="-43.18" y="195.58"/>
 <instance part="U$2" gate="G$1" x="152.4" y="132.08"/>
 <instance part="U$3" gate="G$1" x="152.4" y="109.22"/>
+<instance part="U$4" gate="G$1" x="58.42" y="200.66"/>
+<instance part="U$5" gate="G$1" x="81.28" y="200.66"/>
 </instances>
 <busses>
 </busses>
@@ -7890,6 +7945,16 @@ Most frame-mounted PCB's - M8</description>
 <note version="6.3" minversion="6.2.2" severity="warning">
 Since Version 6.2.2 text objects can contain more than one line,
 which will not be processed correctly with this version.
+</note>
+<note version="8.2" severity="warning">
+Since Version 8.2, EAGLE supports online libraries. The ids
+of those online libraries will not be understood (or retained)
+with this version.
+</note>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports URNs for individual library
+assets (packages, symbols, and devices). The URNs of those assets
+will not be understood (or retained) with this version.
 </note>
 </compatibility>
 </eagle>
