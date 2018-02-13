@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.4.0">
+<eagle version="8.4.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1553,34 +1553,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </library>
 <library name="buckconverter">
 <packages>
-<package name="CAP_POL_22UF">
-<wire x1="-5.08" y1="-5.1562" x2="5.207" y2="-5.1562" width="0.127" layer="21"/>
-<wire x1="5.207" y1="-5.1562" x2="5.207" y2="3.6068" width="0.127" layer="21"/>
-<wire x1="5.207" y1="3.6068" x2="3.683" y2="5.1308" width="0.127" layer="21"/>
-<wire x1="3.683" y1="5.1308" x2="-3.683" y2="5.1308" width="0.127" layer="21"/>
-<wire x1="-3.683" y1="5.1308" x2="-5.08" y2="3.7338" width="0.127" layer="21"/>
-<wire x1="-5.08" y1="3.7338" x2="-5.08" y2="-5.1562" width="0.127" layer="21"/>
-<polygon width="0.127" layer="1">
-<vertex x="0.6096" y="5.5118"/>
-<vertex x="-0.6096" y="5.5118"/>
-<vertex x="-0.6096" y="2.5908" curve="90"/>
-<vertex x="-0.0254" y="1.9812"/>
-<vertex x="-0.023990625" y="1.9812" curve="90"/>
-<vertex x="0.6096" y="2.589390625"/>
-</polygon>
-<polygon width="0.127" layer="1">
-<vertex x="-0.6096" y="-5.5118"/>
-<vertex x="0.6096" y="-5.5118"/>
-<vertex x="0.6096" y="-2.5908" curve="90"/>
-<vertex x="0" y="-1.9812"/>
-<vertex x="-0.001409375" y="-1.9812" curve="90"/>
-<vertex x="-0.6096" y="-2.589390625"/>
-</polygon>
-<smd name="+" x="0" y="3.81" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="-" x="0" y="-3.81" dx="1.27" dy="0.635" layer="1" rot="R270"/>
-<text x="-3.2258" y="0" size="1.27" layer="25">&gt;Name</text>
-<text x="-3.0988" y="-6.5786" size="1.27" layer="27">&gt;Value</text>
-</package>
 <package name="PLANAR_INDUCTOR_3.3UH">
 <wire x1="0" y1="0" x2="7" y2="0" width="0.127" layer="21"/>
 <wire x1="7" y1="0" x2="13" y2="0" width="0.127" layer="21"/>
@@ -1645,32 +1617,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="0" y1="1.9812" x2="1.397" y2="1.9812" width="0.127" layer="21"/>
 <wire x1="1.397" y1="1.9812" x2="1.397" y2="0" width="0.127" layer="21"/>
 <wire x1="1.397" y1="0" x2="0" y2="0" width="0.127" layer="21"/>
-<polygon width="0.127" layer="1">
-<vertex x="0" y="1.9812"/>
-<vertex x="1.397" y="1.9812"/>
-<vertex x="1.397" y="2.5908"/>
-<vertex x="0" y="2.5908"/>
-</polygon>
-<polygon width="0.127" layer="1">
-<vertex x="0" y="1.9812"/>
-<vertex x="0" y="0.9652"/>
-<vertex x="1.397" y="0.9652"/>
-<vertex x="1.397" y="1.9812"/>
-</polygon>
-<polygon width="0.127" layer="1">
-<vertex x="0" y="0"/>
-<vertex x="0" y="-0.4318"/>
-<vertex x="1.397" y="-0.4318"/>
-<vertex x="1.397" y="0"/>
-</polygon>
-<polygon width="0.127" layer="1">
-<vertex x="0" y="0"/>
-<vertex x="0" y="0.381"/>
-<vertex x="1.397" y="0.381"/>
-<vertex x="1.397" y="0"/>
-</polygon>
-<smd name="P$1" x="0.7112" y="2.2606" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$2" x="0.7112" y="0" dx="1.27" dy="0.635" layer="1"/>
+<smd name="P$1" x="0.696775" y="1.778103125" dx="1.524" dy="1.778" layer="1"/>
+<smd name="P$2" x="0.7112" y="0" dx="1.524" dy="0.9652" layer="1"/>
 <text x="0" y="3.302" size="1.27" layer="25">&gt;Name</text>
 <text x="-0.254" y="-2.032" size="1.27" layer="25">&gt;Value</text>
 </package>
@@ -1702,6 +1650,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="8.636" y1="0.762" x2="8.636" y2="12.7" width="0.127" layer="21"/>
 <pad name="P$1" x="12.7" y="0" drill="2.794" shape="square"/>
 <pad name="P$2" x="-12.7" y="0" drill="2.794" shape="square"/>
+</package>
+<package name="BLAH">
+<circle x="0" y="0" radius="2.5" width="0.127" layer="21"/>
+<pad name="P$1" x="-1" y="0" drill="0.6" shape="square"/>
+<pad name="P$2" x="1" y="0" drill="0.6"/>
 </package>
 </packages>
 <symbols>
@@ -1812,22 +1765,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="UCZ1K220MCL1GS">
-<gates>
-<gate name="G$1" symbol="C_POL" x="0" y="-2.54"/>
-</gates>
-<devices>
-<device name="" package="CAP_POL_22UF">
-<connects>
-<connect gate="G$1" pin="+" pad="+"/>
-<connect gate="G$1" pin="-" pad="-"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="PQ3218-3R3-70-T">
 <gates>
 <gate name="G$1" symbol="INDUCTOR" x="0" y="0"/>
@@ -1934,6 +1871,22 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <connects>
 <connect gate="G$1" pin="P$1" pad="P$1"/>
 <connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BLAH">
+<gates>
+<gate name="G$1" symbol="C_POL" x="0" y="-2.54"/>
+</gates>
+<devices>
+<device name="" package="BLAH">
+<connects>
+<connect gate="G$1" pin="+" pad="P$2"/>
+<connect gate="G$1" pin="-" pad="P$1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -7515,8 +7468,6 @@ Most frame-mounted PCB's - M8</description>
 <part name="GND4" library="SparkFun-Aesthetics" library_urn="urn:adsk.eagle:library:507" deviceset="GND" device=""/>
 <part name="GND5" library="SparkFun-Aesthetics" library_urn="urn:adsk.eagle:library:507" deviceset="GND" device=""/>
 <part name="J1" library="MRDT-Connectors" deviceset="APP_2POS_CONFIG" device="5V_HORIZ"/>
-<part name="J2" library="MRDT-Connectors" deviceset="APP_2POS_CONFIG" device="5V_HORIZ"/>
-<part name="C1" library="buckconverter" deviceset="UCZ1K220MCL1GS" device="" value="22u"/>
 <part name="GND2" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="L1" library="buckconverter" deviceset="PQ3218-3R3-70-T" device="" value="3.3uH"/>
 <part name="COUT1" library="buckconverter" deviceset="EGPD101ELL221MK25H" device="" value="220u"/>
@@ -7531,7 +7482,6 @@ Most frame-mounted PCB's - M8</description>
 <part name="GND7" library="SparkFun-Aesthetics" library_urn="urn:adsk.eagle:library:507" deviceset="GND" device=""/>
 <part name="GND8" library="SparkFun-Aesthetics" library_urn="urn:adsk.eagle:library:507" deviceset="GND" device=""/>
 <part name="GND9" library="SparkFun-Aesthetics" library_urn="urn:adsk.eagle:library:507" deviceset="GND" device=""/>
-<part name="GND10" library="SparkFun-Aesthetics" library_urn="urn:adsk.eagle:library:507" deviceset="GND" device=""/>
 <part name="H1" library="MRDT-Hardware" deviceset="MOUNTING_HOLE" device="#8"/>
 <part name="H2" library="MRDT-Hardware" deviceset="MOUNTING_HOLE" device="#8"/>
 <part name="H3" library="MRDT-Hardware" deviceset="MOUNTING_HOLE" device="#8"/>
@@ -7541,6 +7491,7 @@ Most frame-mounted PCB's - M8</description>
 <part name="U$3" library="buckconverter" deviceset="IPP052N06L3GXKSA1" device=""/>
 <part name="U$4" library="buckconverter" deviceset="530002B02500G" device=""/>
 <part name="U$5" library="buckconverter" deviceset="530002B02500G" device=""/>
+<part name="U$6" library="buckconverter" deviceset="BLAH" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7573,9 +7524,6 @@ Most frame-mounted PCB's - M8</description>
 <instance part="GND5" gate="1" x="116.84" y="185.42"/>
 <instance part="J1" gate="GND" x="228.6" y="137.16" rot="R90"/>
 <instance part="J1" gate="VCC" x="223.52" y="137.16" rot="R90"/>
-<instance part="J2" gate="GND" x="246.38" y="137.16" rot="R90"/>
-<instance part="J2" gate="VCC" x="241.3" y="137.16" rot="R90"/>
-<instance part="C1" gate="G$1" x="93.98" y="149.86"/>
 <instance part="GND2" gate="1" x="93.98" y="144.78"/>
 <instance part="L1" gate="G$1" x="175.26" y="121.92" rot="R270"/>
 <instance part="COUT1" gate="G$1" x="200.66" y="111.76"/>
@@ -7591,7 +7539,6 @@ Most frame-mounted PCB's - M8</description>
 <instance part="GND7" gate="1" x="200.66" y="96.52"/>
 <instance part="GND8" gate="1" x="160.02" y="93.98"/>
 <instance part="GND9" gate="1" x="228.6" y="124.46"/>
-<instance part="GND10" gate="1" x="246.38" y="124.46"/>
 <instance part="H1" gate="G$1" x="-40.64" y="236.22"/>
 <instance part="H2" gate="G$1" x="-40.64" y="228.6"/>
 <instance part="H3" gate="G$1" x="-40.64" y="220.98"/>
@@ -7601,6 +7548,7 @@ Most frame-mounted PCB's - M8</description>
 <instance part="U$3" gate="G$1" x="152.4" y="109.22"/>
 <instance part="U$4" gate="G$1" x="58.42" y="200.66"/>
 <instance part="U$5" gate="G$1" x="81.28" y="200.66"/>
+<instance part="U$6" gate="G$1" x="93.98" y="149.86"/>
 </instances>
 <busses>
 </busses>
@@ -7707,10 +7655,6 @@ Most frame-mounted PCB's - M8</description>
 <pinref part="J4" gate="GND" pin="P$1"/>
 </segment>
 <segment>
-<pinref part="C1" gate="G$1" pin="-"/>
-<pinref part="GND2" gate="1" pin="GND"/>
-</segment>
-<segment>
 <pinref part="C3" gate="G$1" pin="2"/>
 <pinref part="COUT2" gate="G$1" pin="-"/>
 <wire x1="208.28" y1="109.22" x2="208.28" y2="101.6" width="0.1524" layer="91"/>
@@ -7753,15 +7697,14 @@ Most frame-mounted PCB's - M8</description>
 <wire x1="228.6" y1="127" x2="228.6" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="GND10" gate="1" pin="GND"/>
-<pinref part="J2" gate="GND" pin="P$1"/>
-<wire x1="246.38" y1="127" x2="246.38" y2="129.54" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="GND5" gate="1" pin="GND"/>
 <pinref part="U1" gate="G$1" pin="GND"/>
 <wire x1="116.84" y1="187.96" x2="121.92" y2="187.96" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="187.96" x2="121.92" y2="180.34" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND2" gate="1" pin="GND"/>
+<pinref part="U$6" gate="G$1" pin="-"/>
 </segment>
 </net>
 <net name="N$13" class="0">
@@ -7792,7 +7735,6 @@ Most frame-mounted PCB's - M8</description>
 <wire x1="93.98" y1="157.48" x2="109.22" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="157.48" x2="119.38" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="119.38" y1="157.48" x2="124.46" y2="157.48" width="0.1524" layer="91"/>
-<pinref part="C1" gate="G$1" pin="+"/>
 <wire x1="93.98" y1="157.48" x2="93.98" y2="154.94" width="0.1524" layer="91"/>
 <pinref part="DB" gate="G$1" pin="A"/>
 <wire x1="124.46" y1="154.94" x2="124.46" y2="157.48" width="0.1524" layer="91"/>
@@ -7804,6 +7746,7 @@ Most frame-mounted PCB's - M8</description>
 <wire x1="111.76" y1="172.72" x2="109.22" y2="172.72" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="172.72" x2="109.22" y2="157.48" width="0.1524" layer="91"/>
 <junction x="109.22" y="157.48"/>
+<pinref part="U$6" gate="G$1" pin="+"/>
 </segment>
 </net>
 <net name="N$16" class="2">
@@ -7913,14 +7856,10 @@ Most frame-mounted PCB's - M8</description>
 <pinref part="J1" gate="VCC" pin="P$1"/>
 <wire x1="223.52" y1="129.54" x2="223.52" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="223.52" y1="121.92" x2="208.28" y2="121.92" width="0.1524" layer="91"/>
-<pinref part="J2" gate="VCC" pin="P$1"/>
-<wire x1="241.3" y1="129.54" x2="241.3" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="241.3" y1="121.92" x2="233.68" y2="121.92" width="0.1524" layer="91"/>
 <junction x="223.52" y="121.92"/>
 <label x="233.68" y="111.76" size="1.778" layer="95" rot="R270" xref="yes"/>
 <wire x1="233.68" y1="121.92" x2="223.52" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="233.68" y1="111.76" x2="233.68" y2="121.92" width="0.1524" layer="91"/>
-<junction x="233.68" y="121.92"/>
 <pinref part="L1" gate="G$1" pin="1"/>
 <wire x1="182.88" y1="121.92" x2="187.96" y2="121.92" width="0.1524" layer="91"/>
 <junction x="187.96" y="121.92"/>

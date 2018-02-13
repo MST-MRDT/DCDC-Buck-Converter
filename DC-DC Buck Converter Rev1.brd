@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.3.1">
+<eagle version="8.4.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.15" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.001" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.001" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -173,7 +173,7 @@
 <wire x1="0.254" y1="69.462" x2="7.754" y2="76.962" width="0.0762" layer="20" curve="-90"/>
 <text x="5.334" y="66.294" size="3.048" layer="21" font="vector" rot="SR270">OUTPUT
 12V, 40A</text>
-<text x="112.9538" y="47.625" size="3.048" layer="21" font="vector" rot="SR90">INPUT 
+<text x="112.9538" y="51.435" size="3.048" layer="21" font="vector" rot="SR90">INPUT 
 20-34V
 30A MAX</text>
 <wire x1="93.98" y1="75.946" x2="93.98" y2="-0.508" width="0.0762" layer="21" style="longdash"/>
@@ -208,34 +208,6 @@ Owen Chiaventone</text>
 <libraries>
 <library name="buckconverter">
 <packages>
-<package name="CAP_POL_22UF">
-<wire x1="-5.08" y1="-5.1562" x2="5.207" y2="-5.1562" width="0.127" layer="21"/>
-<wire x1="5.207" y1="-5.1562" x2="5.207" y2="3.6068" width="0.127" layer="21"/>
-<wire x1="5.207" y1="3.6068" x2="3.683" y2="5.1308" width="0.127" layer="21"/>
-<wire x1="3.683" y1="5.1308" x2="-3.683" y2="5.1308" width="0.127" layer="21"/>
-<wire x1="-3.683" y1="5.1308" x2="-5.08" y2="3.7338" width="0.127" layer="21"/>
-<wire x1="-5.08" y1="3.7338" x2="-5.08" y2="-5.1562" width="0.127" layer="21"/>
-<polygon width="0.127" layer="1">
-<vertex x="0.6096" y="5.5118"/>
-<vertex x="-0.6096" y="5.5118"/>
-<vertex x="-0.6096" y="2.5908" curve="90"/>
-<vertex x="-0.0254" y="1.9812"/>
-<vertex x="-0.023990625" y="1.9812" curve="90"/>
-<vertex x="0.6096" y="2.589390625"/>
-</polygon>
-<polygon width="0.127" layer="1">
-<vertex x="-0.6096" y="-5.5118"/>
-<vertex x="0.6096" y="-5.5118"/>
-<vertex x="0.6096" y="-2.5908" curve="90"/>
-<vertex x="0" y="-1.9812"/>
-<vertex x="-0.001409375" y="-1.9812" curve="90"/>
-<vertex x="-0.6096" y="-2.589390625"/>
-</polygon>
-<smd name="+" x="0" y="3.81" dx="1.27" dy="0.635" layer="1" rot="R90"/>
-<smd name="-" x="0" y="-3.81" dx="1.27" dy="0.635" layer="1" rot="R270"/>
-<text x="-3.2258" y="0" size="1.27" layer="25">&gt;Name</text>
-<text x="-3.0988" y="-6.5786" size="1.27" layer="27">&gt;Value</text>
-</package>
 <package name="CAP_POL_220UF">
 <circle x="0" y="0" radius="6.35" width="0.1524" layer="21"/>
 <text x="-2.54" y="2.54" size="1.27" layer="21">+</text>
@@ -300,32 +272,8 @@ Owen Chiaventone</text>
 <wire x1="0" y1="1.9812" x2="1.397" y2="1.9812" width="0.127" layer="21"/>
 <wire x1="1.397" y1="1.9812" x2="1.397" y2="0" width="0.127" layer="21"/>
 <wire x1="1.397" y1="0" x2="0" y2="0" width="0.127" layer="21"/>
-<polygon width="0.127" layer="1">
-<vertex x="0" y="1.9812"/>
-<vertex x="1.397" y="1.9812"/>
-<vertex x="1.397" y="2.5908"/>
-<vertex x="0" y="2.5908"/>
-</polygon>
-<polygon width="0.127" layer="1">
-<vertex x="0" y="1.9812"/>
-<vertex x="0" y="0.9652"/>
-<vertex x="1.397" y="0.9652"/>
-<vertex x="1.397" y="1.9812"/>
-</polygon>
-<polygon width="0.127" layer="1">
-<vertex x="0" y="0"/>
-<vertex x="0" y="-0.4318"/>
-<vertex x="1.397" y="-0.4318"/>
-<vertex x="1.397" y="0"/>
-</polygon>
-<polygon width="0.127" layer="1">
-<vertex x="0" y="0"/>
-<vertex x="0" y="0.381"/>
-<vertex x="1.397" y="0.381"/>
-<vertex x="1.397" y="0"/>
-</polygon>
-<smd name="P$1" x="0.7112" y="2.2606" dx="1.27" dy="0.635" layer="1"/>
-<smd name="P$2" x="0.7112" y="0" dx="1.27" dy="0.635" layer="1"/>
+<smd name="P$1" x="0.696775" y="1.778103125" dx="1.524" dy="1.778" layer="1"/>
+<smd name="P$2" x="0.7112" y="0" dx="1.524" dy="0.9652" layer="1"/>
 <text x="0" y="3.302" size="1.27" layer="25">&gt;Name</text>
 <text x="-0.254" y="-2.032" size="1.27" layer="25">&gt;Value</text>
 </package>
@@ -357,6 +305,11 @@ Owen Chiaventone</text>
 <wire x1="8.636" y1="0.762" x2="8.636" y2="12.7" width="0.127" layer="21"/>
 <pad name="P$1" x="12.7" y="0" drill="2.794" shape="square"/>
 <pad name="P$2" x="-12.7" y="0" drill="2.794" shape="square"/>
+</package>
+<package name="BLAH">
+<circle x="0" y="0" radius="2.5" width="0.127" layer="21"/>
+<pad name="P$1" x="-1" y="0" drill="0.6" shape="square"/>
+<pad name="P$2" x="1" y="0" drill="0.6"/>
 </package>
 </packages>
 </library>
@@ -6061,10 +6014,10 @@ design rules under a new name.</description>
 <param name="slThermalsForVias" value="0"/>
 <param name="dpMaxLengthDifference" value="10mm"/>
 <param name="dpGapFactor" value="2.5"/>
-<param name="checkGrid" value="0"/>
 <param name="checkAngle" value="0"/>
 <param name="checkFont" value="1"/>
 <param name="checkRestrict" value="1"/>
+<param name="checkStop" value="0"/>
 <param name="useDiameter" value="13"/>
 <param name="maxErrors" value="50"/>
 </designrules>
@@ -6165,10 +6118,6 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="C1" library="buckconverter" package="CAP_POL_22UF" value="22u" x="79.502" y="8.128" smashed="yes">
-<attribute name="NAME" x="76.0222" y="13.716" size="1.27" layer="25" font="vector"/>
-<attribute name="VALUE" x="75.3872" y="1.397" size="1.27" layer="27" font="vector"/>
-</element>
 <element name="C3" library="SparkFun-Passives" package="0603-CAP" value="22p" x="22.352" y="41.148" smashed="yes" rot="R180">
 <attribute name="NAME" x="23.368" y="42.672" size="0.8128" layer="25" font="vector" rot="R180"/>
 <attribute name="VALUE" x="21.0312" y="42.5958" size="0.8128" layer="27" font="vector" rot="R180"/>
@@ -6211,10 +6160,6 @@ design rules under a new name.</description>
 <attribute name="COLOR1" value="RED" x="-9.906" y="32.766" size="1.778" layer="27" display="off"/>
 <attribute name="COLOR2" value="BLACK" x="-9.906" y="32.766" size="1.778" layer="27" display="off"/>
 </element>
-<element name="J2" library="MRDT-Connectors" package="APP45_5V_HORIZ_CONFIG" value="APP_2POS_CONFIG5V_HORIZ" x="-9.906" y="24.892">
-<attribute name="COLOR1" value="RED" x="-9.906" y="24.892" size="1.778" layer="27" display="off"/>
-<attribute name="COLOR2" value="BLACK" x="-9.906" y="24.892" size="1.778" layer="27" display="off"/>
-</element>
 <element name="L1" library="buckconverter" package="PLANAR_INDUCTOR_3.3UH" value="3.3uH" x="26.67" y="52.832"/>
 <element name="R1" library="SparkFun-Passives" package="0603-RES" value="113k" x="41.148" y="11.176" smashed="yes">
 <attribute name="NAME" x="40.4368" y="11.8364" size="0.8128" layer="25" font="vector"/>
@@ -6248,7 +6193,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="52.753" y="8.16" size="0.8128" layer="25" font="vector" ratio="10" rot="R90"/>
 <attribute name="VALUE" x="60.386" y="5.9248" size="0.8128" layer="21" font="vector" ratio="10" rot="R90"/>
 </element>
-<element name="D1" library="buckconverter" package="DIODE_SCHOTTKY_30V_1A" value="RBR3MM30ATR" x="86.868" y="54.61"/>
+<element name="D1" library="buckconverter" package="DIODE_SCHOTTKY_30V_1A" value="RBR3MM30ATR" x="105.0036" y="49.911" rot="R270"/>
 <element name="DB" library="buckconverter" package="DIODE_STANDARD_100V" value="RF05VAM1STR" x="45.847" y="13.208" smashed="yes">
 <attribute name="NAME" x="48.2092" y="13.5128" size="0.8128" layer="25" font="vector" rot="R90"/>
 <attribute name="VALUE" x="45.1104" y="16.891" size="0.4064" layer="25" font="vector" rot="R270"/>
@@ -6279,6 +6224,7 @@ design rules under a new name.</description>
 </element>
 <element name="U$4" library="buckconverter" package="RADIAL_FIN_HEATSINK" value="530002B02500G" x="91.186" y="54.864" rot="R90"/>
 <element name="U$5" library="buckconverter" package="RADIAL_FIN_HEATSINK" value="530002B02500G" x="71.882" y="38.1" rot="R90"/>
+<element name="U$6" library="buckconverter" package="BLAH" value="BLAH" x="81.28" y="7.62" rot="R90"/>
 </elements>
 <signals>
 <signal name="N$4">
@@ -6351,7 +6297,6 @@ design rules under a new name.</description>
 <contactref element="U$1" pad="6"/>
 <contactref element="CIN2" pad="2"/>
 <contactref element="CIN1" pad="GND"/>
-<contactref element="C1" pad="-"/>
 <contactref element="J4" pad="GND"/>
 <polygon width="0.1524" layer="1" isolate="0.4064" thermals="no" rank="6">
 <vertex x="1.27" y="76.454"/>
@@ -6373,7 +6318,6 @@ design rules under a new name.</description>
 <contactref element="CDRVCC" pad="2"/>
 <contactref element="CVCC" pad="2"/>
 <contactref element="J1" pad="GND"/>
-<contactref element="J2" pad="GND"/>
 <contactref element="U1" pad="2"/>
 <polygon width="0.3048" layer="16" isolate="0.4064">
 <vertex x="-0.254" y="19.05"/>
@@ -6434,8 +6378,6 @@ design rules under a new name.</description>
 <via x="105.664" y="59.436" extent="1-16" drill="0.35" shape="square"/>
 <via x="98.044" y="59.436" extent="1-16" drill="0.35" shape="square"/>
 <via x="2.286" y="67.056" extent="1-16" drill="0.35" shape="square"/>
-<wire x1="79.502" y1="4.318" x2="79.502" y2="1.524" width="0.6096" layer="1"/>
-<via x="79.502" y="1.524" extent="1-16" drill="0.35" shape="square"/>
 <via x="2.286" y="21.336" extent="1-16" drill="0.35" shape="square"/>
 <via x="9.906" y="21.336" extent="1-16" drill="0.35" shape="square"/>
 <via x="17.526" y="21.336" extent="1-16" drill="0.35" shape="square"/>
@@ -6487,6 +6429,9 @@ design rules under a new name.</description>
 <via x="93.218" y="23.622" extent="1-16" drill="0.35" shape="square"/>
 <via x="55.372" y="22.352" extent="1-16" drill="0.35" shape="square"/>
 <via x="45.466" y="21.336" extent="1-16" drill="0.35" shape="square"/>
+<contactref element="U$6" pad="P$1"/>
+<wire x1="81.28" y1="6.62" x2="81.28" y2="5.08" width="0.4064" layer="1"/>
+<via x="81.28" y="5.08" extent="1-16" drill="0.35" shape="square"/>
 </signal>
 <signal name="N$13">
 <contactref element="U$1" pad="12"/>
@@ -6505,7 +6450,6 @@ design rules under a new name.</description>
 <contactref element="CDRVCC" pad="1"/>
 <contactref element="U$1" pad="1"/>
 <contactref element="DB" pad="P$2"/>
-<contactref element="C1" pad="+"/>
 <contactref element="U1" pad="3"/>
 <wire x1="53.403" y1="6.619" x2="50.8" y2="6.619" width="0.3048" layer="1"/>
 <wire x1="50.8" y1="6.619" x2="50.8" y2="6.604" width="0.3048" layer="1"/>
@@ -6523,15 +6467,19 @@ design rules under a new name.</description>
 <wire x1="56.578" y1="13.13384375" x2="56.578" y2="11.9710125" width="0.508" layer="1"/>
 <wire x1="57.238" y1="15.24" x2="57.9882" y2="15.9902" width="0.508" layer="1"/>
 <wire x1="57.9882" y1="15.9902" x2="57.9882" y2="17.946" width="0.508" layer="1"/>
-<wire x1="78.848034375" y1="10.522034375" x2="56.242034375" y2="10.522034375" width="0.508" layer="1"/>
+<wire x1="78.74" y1="10.522034375" x2="78.848034375" y2="10.522034375" width="0.508" layer="1"/>
+<wire x1="78.74" y1="10.522034375" x2="56.242034375" y2="10.522034375" width="0.508" layer="1"/>
 <wire x1="50.822715625" y1="11.153284375" x2="50.822715625" y2="10.414" width="0.3048" layer="1"/>
-<wire x1="79.502" y1="11.176" x2="79.502" y2="11.938" width="0.508" layer="1"/>
-<wire x1="79.502" y1="11.176" x2="78.848034375" y2="10.522034375" width="0.508" layer="1"/>
 <wire x1="46.5582" y1="13.208" x2="47.0662" y2="12.7" width="0.3048" layer="1"/>
 <wire x1="47.0662" y1="12.7" x2="49.276" y2="12.7" width="0.3048" layer="1"/>
 <wire x1="49.276" y1="12.7" x2="50.822715625" y2="11.153284375" width="0.3048" layer="1"/>
-<wire x1="79.502" y1="11.938" x2="85.7504" y2="5.6896" width="0.4064" layer="1"/>
-<wire x1="85.7504" y1="5.6896" x2="100.33" y2="5.6896" width="0.4064" layer="1"/>
+<wire x1="86.36" y1="5.6896" x2="85.7504" y2="5.6896" width="0.4064" layer="1"/>
+<contactref element="U$6" pad="P$2"/>
+<wire x1="86.36" y1="5.6896" x2="100.33" y2="5.6896" width="0.4064" layer="1"/>
+<wire x1="79.377965625" y1="10.522034375" x2="81.28" y2="8.62" width="0.508" layer="1"/>
+<wire x1="79.377965625" y1="10.522034375" x2="78.74" y2="10.522034375" width="0.508" layer="1"/>
+<wire x1="81.28" y1="8.62" x2="84.2104" y2="5.6896" width="0.4064" layer="1"/>
+<wire x1="84.2104" y1="5.6896" x2="86.36" y2="5.6896" width="0.4064" layer="1"/>
 </signal>
 <signal name="N$16" class="2">
 <contactref element="U$1" pad="10"/>
@@ -6642,7 +6590,7 @@ design rules under a new name.</description>
 <contactref element="U$1" pad="15"/>
 <contactref element="DB" pad="P$1"/>
 <contactref element="CB" pad="1"/>
-<wire x1="46.5582" y1="15.4686" x2="49.1372" y2="15.4686" width="0.3048" layer="1"/>
+<wire x1="46.543775" y1="14.986103125" x2="49.1372" y2="15.4686" width="0.3048" layer="1"/>
 <wire x1="51.2318" y1="13.374" x2="49.1372" y2="15.4686" width="0.3048" layer="1"/>
 <wire x1="53.67873125" y1="11.2676" x2="52.7404" y2="11.2676" width="0.3048" layer="1"/>
 <wire x1="51.308" y1="12.7" x2="51.308" y2="13.2978" width="0.3048" layer="1"/>
@@ -6760,7 +6708,6 @@ design rules under a new name.</description>
 <contactref element="COUT1" pad="+"/>
 <contactref element="COUT2" pad="+"/>
 <contactref element="J1" pad="5V"/>
-<contactref element="J2" pad="5V"/>
 <contactref element="CC3" pad="2"/>
 <contactref element="R1" pad="1"/>
 <contactref element="L1" pad="P$1"/>
@@ -6812,6 +6759,10 @@ design rules under a new name.</description>
 <via x="40.386" y="28.956" extent="1-16" drill="0.35"/>
 <via x="32.766" y="26.416" extent="1-16" drill="0.35"/>
 <via x="40.386" y="26.416" extent="1-16" drill="0.35"/>
+<via x="28.956" y="28.956" extent="1-16" drill="0.35"/>
+<via x="25.146" y="28.956" extent="1-16" drill="0.35"/>
+<via x="28.956" y="26.416" extent="1-16" drill="0.35"/>
+<via x="25.146" y="26.416" extent="1-16" drill="0.35"/>
 </signal>
 </signals>
 </board>
